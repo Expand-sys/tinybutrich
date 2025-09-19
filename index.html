@@ -70,11 +70,15 @@
       .active {
         background-color: #333;
       }
-      footer {
-        background: #222;
-        color: #aaa;
-        padding: 15px;
-        font-size: 0.9em;
+      footer p::before {
+        content: "really small";
+        display: inline-block;
+        transition: opacity 0.3s ease;
+      }
+
+      footer:hover p::before {
+        content: "this is a satire website i dont actually know the size of these mens penises";
+        color: #ffcc00;
       }
     </style>
   </head>
