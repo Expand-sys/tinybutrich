@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tiny Cock But rich</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        background: #f9f9f9;
+      }
+
+      h1 {
+        margin-top: 40px;
+        font-size: 2.5em;
+        color: #333;
+      }
+
+      h2 {
+        margin-bottom: 40px;
+        font-weight: normal;
+        color: #666;
+      }
+
+      .slideshow-container {
+        position: relative;
+        max-width: 800px;
+        margin: auto;
+      }
+
+      .slide {
+        display: none;
+      }
+
+      .slide img {
+        width: 100%;
+        border-radius: 10px;
+      }
+
+      .fade {
+        animation: fadeEffect 1s;
+      }
+
+      @keyframes fadeEffect {
+        from {
+          opacity: 0.4;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      .dots {
+        margin-top: 20px;
+      }
+
+      .dot {
+        height: 15px;
+        width: 15px;
+        margin: 0 5px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        cursor: pointer;
+      }
+
+      .active {
+        background-color: #333;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>tiny cock but rich</h1>
+    <h2>is still a small cocked loser</h2>
+
+    <div class="slideshow-container">
+      <div class="slide fade">
+        <img src="image1.jpg" alt="Slide 1" />
+      </div>
+      <div class="slide fade">
+        <img src="image2.jpg" alt="Slide 2" />
+      </div>
+      <div class="slide fade">
+        <img src="image3.jpg" alt="Slide 3" />
+      </div>
+    </div>
+
+    <div class="dots">
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+    </div>
+
+    <script>
+      let slideIndex = 0;
+      showSlides();
+
+      function showSlides() {
+        let slides = document.getElementsByClassName("slide");
+        let dots = document.getElementsByClassName("dot");
+        for (let i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {
+          slideIndex = 1;
+        }
+        for (let i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+        setTimeout(showSlides, 3000); // Change image every 3 seconds
+      }
+    </script>
+  </body>
+</html>
